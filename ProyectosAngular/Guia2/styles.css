@@ -1,0 +1,224 @@
+/* You can add global styles to this file, and also import other style files */
+:root {
+    --variabletitulo: 2rem;
+    --variableparrafo: 16px;
+    --variableparrafo2: 12px; 
+
+    /* Estilo-fuente en negrita para los enlaces */ 
+    --link-font-weight: bold; 
+    --link-text-decoration: none; /* Quitar subrayado de los enlaces */
+
+    /* Colores */
+    --color: #ff4900;
+    --color1: #0093FF;
+    --color2: #c500ff;
+    --colorlinks: #001bff;
+    --colorvisited: #4CAF50;
+    --colorhover: #ff6600;
+    /* Fuentes */
+    --fuente: 'Nerko One', cursive;
+    --fuente1: Arial, sans-serif; 
+    /* Color filas */
+    --cfi: #bec1c3;
+    --cfi-texto: #000000;
+    --cfp: #045795;
+    --cfp-texto: #ffffff;
+    --tamano-fila: 1.5rem;
+    /* Color-fondo-encabezado-tabla */
+    --color-header-fondo: #000000; 
+
+    /* Color-texto-encabezado-tabla */
+    --color-header-texto: #ffffff; 
+
+    /* Tamaño-fuente-encabezado */
+    --tamano-header: 1.5rem;
+
+    
+}
+
+html  {
+    color: var(--color);
+    font-size: var(--variableparrafo);
+    text-align: left;
+}
+
+body {
+    color: var(--color);
+    font-size: var(--variableparrafo);
+    text-align: left
+}
+
+h2 {
+    font-size: var(--variabletitulo);
+    color: var(--color);
+    text-align: center;
+}
+
+p {
+    font-size: var(--variableparrafo);
+    color: var(--color1);
+    font-family: var(--fuente1);
+}
+
+p.chicki {
+    font-size: var(--variableparrafo2);
+    color: var(--color2);
+    font-family: var(--fuente);
+}
+
+ul li a {
+    color: var(--colorlink);
+    font-weight: var(--link-font-weight);
+    text-decoration: var(--link-text-decoration);
+}
+
+a:visited {
+    color: var(--colorvisited);
+}
+
+a:hover {
+    color: var(--colorhover);
+    text-decoration: underline;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th {
+    background-color: var(--color-header-fondo);
+    color: var(--color-header-texto);
+    font-size: var(--tamano-header);
+    padding: 8px;
+    text-align: left;
+}
+
+td {
+    padding: 8px;
+    font-size: var(--tamano-fila);
+}
+
+tr:nth-child(odd) {
+    background-color: var(--cfi);
+    color: var(--cfi-texto);
+}
+
+tr:nth-child(even) {
+    background-color: var(--cfp);
+    color: var(--cfp-texto);
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.contenedor {
+    background-color: #000000;
+    display: grid;
+    grid-template-rows: repeat(3);
+    width: 1000;
+}
+
+.header {
+    background-color: #7b2bc58c;
+    grid-template-columns: repeat(2,1fr);
+    display: flex;
+    width: auto;
+    height: 150px;
+    justify-content: center;
+    align-items: center;
+    gap: 600px;
+}
+.espacio{
+    margin-left: 10px;
+    background-color: #defcd780;
+
+}
+
+.logo {
+    margin-left: 10px;
+    background-color: #c9baba;
+    width: 120px;
+    height: 120px;
+    background-size: 230px;
+    background-position: center;
+    background-image: url("https://hips.hearstapps.com/hmg-prod/images/gettyimages-1142945508.jpg");
+}
+.p-buscador{
+    color: #000000;
+    font-size: 20px;
+    text-align: left
+}
+.buscador {
+    
+    background-color: #d8b1fcfd;
+    width: 300px;
+    height: 50px;
+    justify-content: right;
+    font: bold;
+
+}
+
+.side-bar { 
+    background-color: #d8b1fcfd;
+    width: 350px;
+    height: 500px;
+    color: #000000;
+    font: bold;
+}
+.content {
+    background-color: #d8b1fcfd;
+    height: 500px;
+    width: 1300px;
+    background-size: 1400x;
+    background-position: center;
+    background-image: url("https://img.unocero.com/2019/03/mapamundi.jpg")
+
+    
+}
+.main {
+    height: 500px;
+    display: flex;
+    background-color: #1b0fcc56;
+    grid-template-columns: repeat(2,1fr);   
+    width: 1300px;
+    margin: 10px;
+    gap: 20px;
+}
+.footer {
+    display: flex;
+    background-color: #7b2bc58c;
+    grid-template-columns: repeat(3,1fr);
+    height: 125px;
+    justify-content: center;
+    align-items: center;
+    gap: 300px;
+}
+
+.footer-1 {
+    background-color: #d8b1fcfd;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+}
+
+.footer-2 {
+    background-color: #d8b1fcfd;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+}
+
+.footer-3 {
+    background-color: #d8b1fcfd;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+}
+
+.p-footer {
+    color: #000000;
+    font-size: 20px;
+    align-self:center;
+}
