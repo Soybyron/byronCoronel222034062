@@ -4,8 +4,8 @@
         <p><b>Nombre</b></p>
         <div class="formgrid grid gap-2">
             <div class="field col">   
-                <input pInputText type="text" id="firstName" formControlName="firstName" placeholder="Nombre gerente" class="w-full">
-                <div class="error" *ngIf="otherForm.controls['firstName'].invalid && otherForm.controls['firstName'].touched">
+                <input pInputText type="text" id="directName" formControlName="directName" placeholder="Nombre gerente" class="w-full">
+                <div class="error" *ngIf="otherForm.controls['directName'].invalid && otherForm.controls['directName'].touched">
                     Debe asignar el nombre del gerente
                 </div>
             </div>
@@ -13,12 +13,12 @@
     </div>
 
     <div class="field"> 
-        <label for="email"><b>Correo electrónico del gerente</b></label>
+        <label for="directEmail"><b>Correo electrónico del gerente</b></label>
         <p-inputGroup>
             <p-inputGroupAddon><i class="pi pi-envelope"></i></p-inputGroupAddon>
-            <input pInputText type="text" formControlName="email" id="email" class="w-full">
+            <input pInputText type="text" formControlName="directEmail" id="directEmail" class="w-full">
         </p-inputGroup>
-        <div class="error" *ngIf="otherForm.controls['email'].invalid && otherForm.controls['email'].touched" >
+        <div class="error" *ngIf="otherForm.controls['directEmail'].invalid && otherForm.controls['directEmail'].touched" >
             Ingresar correo del gerente
         </div>
     </div>
