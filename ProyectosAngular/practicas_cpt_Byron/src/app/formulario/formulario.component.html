@@ -1,0 +1,6 @@
+<form [formGroup]="otherForm" (ngSubmit)="onSubmit()">
+    <app-persona [otherForm]="otherForm"></app-persona>
+    <app-gerente [otherForm]="otherForm"></app-gerente>
+    <app-datos [otherForm]="otherForm"></app-datos>
+    <button type="submit" [disabled]="otherForm.invalid" label="Enviar" pButton style="width: 100%;"></button>
+</form>

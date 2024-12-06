@@ -1,0 +1,33 @@
+<h1>Detalles de la licencia</h1>
+
+<div class="p-fluid">
+    <form [formGroup]="otherForm">
+        <div class="p-field">
+            <label for="date_ini">Fecha de inicio</label>
+            <div class="p-inputgroup">
+                <span class="p-inputgroup-addon"><i class="pi pi-calendar-times"></i></span>
+                <p-calendar id="date_ini" formControlName = "date_ini"></p-calendar>
+            </div>
+            <div *ngIf="otherForm.controls['date_ini'].invalid && otherForm.controls['date_ini'].touched" class="error">
+                Seleccione la fecha de Iniciacion 
+            </div>
+        </div>
+        <div class="p-field">
+            <label for="date_fi">Fecha de finalización</label>
+            <div class="p-inputgroup">
+                <span class="p-inputgroup-addon"><i class="pi pi-calendar-times"></i></span>
+                <p-calendar id="date_fi" formControlName = "date_fi"></p-calendar>
+            </div>
+            <div *ngIf="otherForm.controls['date_fi'].invalid && otherForm.controls['date_fi'].touched" class="error">
+                Seleccione la fecha de finalización 
+            </div>
+        </div>
+        <div class="p-field">
+            <label for="notes">Notas</label>
+            <div class="p-inputgroup">
+                <span class="p-inputgroup-addon"><i class="pi pi-align-left"></i></span>
+                <textarea pInputTextarea formControlName="notes"></textarea>
+            </div>
+        </div>
+    </form>
+</div>
