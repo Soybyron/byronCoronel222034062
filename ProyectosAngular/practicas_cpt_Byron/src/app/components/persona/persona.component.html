@@ -2,7 +2,6 @@
 <div [formGroup]="otherForm">
     <div class="field"> 
         <p><b>Nombre</b></p>
-        <p class="subtitle">Descripción</p>
         <div class="formgrid grid gap-2">
             <div class="field col">   
                 <input pInputText type="text" id="firstName" formControlName="firstName" placeholder="Primer Nombre" class="w-full">
@@ -21,19 +20,17 @@
 
     <div class="field"> 
         <label for="email"><b>Correo electrónico</b></label>
-        <p class="subtitle">Descripción</p>
         <p-inputGroup>
             <p-inputGroupAddon><i class="pi pi-envelope"></i></p-inputGroupAddon>
             <input pInputText type="text" formControlName="email" id="email" class="w-full">
         </p-inputGroup>
         <div class="error" *ngIf="otherForm.controls['email'].invalid && otherForm.controls['email'].touched" >
-            Ingresar Correo electrónico
+            Debe ingresar un Correo electrónico
         </div>
     </div>
 
     <div class="field">
         <label for="phone"><b>Telefono</b></label>
-        <p class="subtitle">Descripción</p>
         <p-inputGroup>
             <p-inputGroupAddon><i class="pi pi-phone"></i></p-inputGroupAddon>
             <input pInputText type="text" id="phone" formControlName="phone" class="w-full">

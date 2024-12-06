@@ -2,10 +2,9 @@
 <div [formGroup]="otherForm">
     <div class="field"> 
         <p><b>Nombre</b></p>
-        <p class="subtitle">Descripción</p>
         <div class="formgrid grid gap-2">
             <div class="field col">   
-                <input pInputText type="text" id="firstName" formControlName="firstName" placeholder="" class="w-full">
+                <input pInputText type="text" id="firstName" formControlName="firstName" placeholder="Nombre gerente" class="w-full">
                 <div class="error" *ngIf="otherForm.controls['firstName'].invalid && otherForm.controls['firstName'].touched">
                     Debe asignar el nombre del gerente
                 </div>
@@ -15,7 +14,6 @@
 
     <div class="field"> 
         <label for="email"><b>Correo electrónico del gerente</b></label>
-        <p class="subtitle">Descripción</p>
         <p-inputGroup>
             <p-inputGroupAddon><i class="pi pi-envelope"></i></p-inputGroupAddon>
             <input pInputText type="text" formControlName="email" id="email" class="w-full">
