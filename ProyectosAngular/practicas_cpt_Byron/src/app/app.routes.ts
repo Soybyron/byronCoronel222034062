@@ -1,7 +1,20 @@
 import { Routes } from '@angular/router';
 import { FormularioComponent } from './formulario/formulario.component';
+import { ValidacionComponent } from './components/validacion/validacion.component';
+
 
 export const routes: Routes = [
-    {path:"formulario", component:FormularioComponent}, 
-    {path:"", redirectTo:"formulario", pathMatch:"full"}
+        {
+            path : 'formulario_vacaciones',
+            component : FormularioComponent
+        },
+        {
+            path : '',
+            redirectTo : 'formulario_vacaciones',
+            pathMatch : 'full'
+        },
+        {
+            path : 'validation_user',
+            component : ValidacionComponent
+        }
 ];

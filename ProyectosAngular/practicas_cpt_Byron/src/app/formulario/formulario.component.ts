@@ -2,12 +2,14 @@ import { Component } from '@angular/core';
 import { DatosComponent } from '../components/datos/datos.component';
 import { GerenteComponent } from '../components/gerente/gerente.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { Button, ButtonModule } from 'primeng/button';
+import { ButtonModule } from 'primeng/button';
 import { FormGroup } from '@angular/forms';
 import { FormBuilder } from '@angular/forms';
 import { Validators } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { PersonaComponent } from '../components/persona/persona.component';
+import { SolicitudDeVacacionesService } from '../services/solicitud-de-vacaciones.service';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'app-formulario',
@@ -19,7 +21,7 @@ import { PersonaComponent } from '../components/persona/persona.component';
 export class FormularioComponent {
   otherForm: FormGroup;
 
-  constructor(private fb: FormBuilder){
+  constructor(private fb: FormBuilder, private registerService : SolicitudDeVacacionesService){
     this.otherForm = this.fb.group(
       {
         firstName: ['',Validators.required],
@@ -37,9 +39,20 @@ export class FormularioComponent {
   onSubmit(){
     if (this.otherForm.valid){
       console.log(this.otherForm.value);
+      const {firstName,lastName,email,phone,directName,directEmail,beginDate,endDate, textEdit} = this.otherForm.value;
+      this.registerService.register(firstName,lastName,email,phone,directName,directEmail,beginDate,endDate, textEdit).subscribe(
+        {
+          next: (response) => {
+            {console.log('Exitoso',response)};
+        },
+         complete:() => {
+          console.log("Envio de información completo!")
+         }
+        });
+
     }else{
       console.log('Formulario no valido');
     }
-  }
+  };
 }
 
