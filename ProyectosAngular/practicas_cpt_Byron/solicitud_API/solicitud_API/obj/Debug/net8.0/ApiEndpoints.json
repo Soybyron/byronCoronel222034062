@@ -1,0 +1,34 @@
+[
+  {
+    "ContainingType": "api_solicitud_de_vacaciones.Controllers.UsersControler",
+    "Method": "Register",
+    "RelativePath": "api/UsersControler/register",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "user",
+        "Type": "api_solicitud_de_vacaciones.FormularioClass",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_solicitud_de_vacaciones.Controllers.UsersControler",
+    "Method": "Validation",
+    "RelativePath": "api/UsersControler/validation",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "user",
+        "Type": "solicitud_API.Validacion",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]
