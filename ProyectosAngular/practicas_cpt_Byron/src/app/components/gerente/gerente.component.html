@@ -1,0 +1,26 @@
+<h1>Formulario de solicitud de Vacaciones</h1>
+<div [formGroup]="otherForm">
+    <div class="field"> 
+        <p><b>Nombre</b></p>
+        <div class="formgrid grid gap-2">
+            <div class="field col">   
+                <input pInputText type="text" id="directName" formControlName="directName" placeholder="Nombre gerente" class="w-full">
+                <div class="error" *ngIf="otherForm.controls['directName'].invalid && otherForm.controls['directName'].touched">
+                    Debe asignar el nombre del gerente
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="field"> 
+        <label for="directEmail"><b>Correo electrónico del gerente</b></label>
+        <p-inputGroup>
+            <p-inputGroupAddon><i class="pi pi-envelope"></i></p-inputGroupAddon>
+            <input pInputText type="text" formControlName="directEmail" id="directEmail" class="w-full">
+        </p-inputGroup>
+        <div class="error" *ngIf="otherForm.controls['directEmail'].invalid && otherForm.controls['directEmail'].touched" >
+            Ingresar correo del gerente
+        </div>
+    </div>
+
+</div>

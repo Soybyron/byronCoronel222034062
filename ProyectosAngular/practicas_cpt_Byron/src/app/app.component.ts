@@ -1,0 +1,17 @@
+import { Component } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
+import { ReactiveFormsModule } from '@angular/forms';
+import { FormularioComponent } from './formulario/formulario.component';
+import { ButtonModule } from 'primeng/button';
+
+
+@Component({
+  selector: 'app-root',
+  standalone: true,
+  imports: [RouterOutlet, FormularioComponent,ReactiveFormsModule],
+  templateUrl: './app.component.html',
+  styleUrl: './app.component.css'
+})
+export class AppComponent {
+  title = 'practicas_cpt_Byron';
+}

@@ -1,0 +1,23 @@
+<form [formGroup]="validationForm" (ngSubmit)="onSubmit()">
+    <div class="p-field">
+        <p><b>Apellido</b></p>
+        <input id="lastName" type="text" pInputText formControlName = "lastName" class="w-full">
+        <div *ngIf="validationForm.controls['lastName'].invalid && validationForm.controls['lastName'].touched" class="error">
+           El apellido es requerido 
+        </div>
+    </div>
+    <div class="p-field">
+        <label for="email"><p><b>Correo electrónico</b></p></label>
+        <div  class="p-inputgroup">
+            <span class="p-inputgroup-addon">
+                <i class="pi pi-envelope"></i>
+            </span>
+            <input id="email" type="email" pInputText formControlName = "email">
+        </div>
+        <div *ngIf="validationForm.controls['email'].invalid && validationForm.controls['email'].touched" class="error">
+            Correo electonico es requerido
+        </div>
+    </div>
+    <p></p>
+    <button pButton style="width: 100%;" type="submit" label="Consultar" [disabled]="validationForm.invalid" ></button>
+</form> 
